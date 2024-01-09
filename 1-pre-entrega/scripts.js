@@ -29,10 +29,10 @@ function calculaTotal(continua) {
   totalAPagar = 0 
   for (let producto of productos) {
     totalAPagar += producto.precio;
-    console.log("Total acumulado: ", totalAPagar);
+    console.log("Total: ", totalAPagar);
   }
   if (!continua) {
-    alert("El total de su compra es: " + totalAPagar);
+    alert("Ha agregado " + productos.length + " producto(s). El total de su compra es: " + totalAPagar);
     if (confirm("¿Desea ver el detalle de su compra?")) {
       mostrarDetalleCompra();
     }
