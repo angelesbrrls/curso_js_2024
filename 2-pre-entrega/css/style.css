@@ -1,0 +1,71 @@
+.card{
+  width: 18rem;
+  margin: 15px 15px 15px 15px;
+}
+
+.centrado{
+  text-align: center;
+  margin: 30px 15px 15px 15px;
+}
+.header-title{
+  text-align: center;
+  margin: 30px 5px 5px 5px;
+  color: #4D0592;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.notas{
+  font-family: sans-serif;
+  font-style: italic;
+  font-size: 0.875em;
+}
+
+.color-title{
+  color: #4D0592;
+}
+.button-container {
+  display: flex;
+}
+
+.visita{
+  color: #4D0592;
+}
+
+#inicio{
+  margin-top: 10px;
+}
+
+#btnEntrar{
+  margin-top: 10px;
+}
+
+#listaProductos{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+#carrito{
+  margin: 15px 15px 15px 15px;
+  background-color: #C0F5BD ;
+  color: black;
+}
+
+#btnCompra{
+  margin: 15px 10px 10px 30px;
+  visibility: hidden;
+  width: 280px;
+}
+
+#btnLimpia{
+  margin: 15px 10px 10px 30px;
+  visibility: hidden;
+  width: 280px;
+}
+
+
+
+
+
+
