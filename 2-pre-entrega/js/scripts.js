@@ -48,7 +48,7 @@ function cargarProductos() {
         <h5 class="color-title"> ${producto.nombre} </h5>
         <h1> ${producto.precio} $MX</h1>
         <p class="notas">${producto.descripción}</p>
-        <button onclick="agregarProducto(${producto.id})" class="btn btn-primary">Agregar</button>
+        <button onclick="agregarProducto(${producto.id})" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Agregar al carrito" ><i class="bi bi-bag-plus-fill"></i></button>
       </div>
       </div>
     `;
@@ -69,8 +69,7 @@ function mostrarDetalle(detalle, total, cantidad) {
     </tr>
   </thead>
   <tbody> ${detalle} </tbody> </table>
-  Ha agregado ${cantidad} de productos.
-  El total de su compra es: $ ${total} MX`
+  Ha agregado ${cantidad} producto(s). El total de su compra es: <b> $ ${total} MX. </b> `
 }
 
 //Función para calcular el total de los productos seleccionados
@@ -78,7 +77,7 @@ function calculoTotal() {
     let detalle = "";
     totalAPagar = 0
     for (let producto of productosSeleccionados) {
-      detalle += ` <tr><td>${producto.nombre}</td><td> $ ${producto.precio}</td><td><button onclick="removerProducto(${producto.id})" class="btn btn-danger">Quitar</button></td></tr> `;
+      detalle += ` <tr><td>${producto.nombre}</td><td> $ ${producto.precio}</td><td><button onclick="removerProducto(${producto.id})" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar producto del carrito"><i class="bi bi-trash-fill"></i></button></td></tr> `;
       totalAPagar += producto.precio;
     }
     mostrarDetalle(detalle, totalAPagar, productosSeleccionados.length)
