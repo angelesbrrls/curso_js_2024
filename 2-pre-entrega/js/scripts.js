@@ -109,7 +109,8 @@ botonPagar.addEventListener("click", function() {
   let inicio = document.getElementById("principal");
   inicio.innerHTML = `<h3>¡Gracias por tu compra! </h3>
    <p> <span class= "visita">${invitado}</span>... ¡Vuelve pronto!</p>`;
-   limpiarLocalStorage()
+   localStorage.setItem("nombreInvitado", "Invitado");
+   limpiarCarrito()
 });
 
 //Función para mostrar el botón Pagar
@@ -128,12 +129,11 @@ botonLimpiar.addEventListener("click", function() {
 
 //Función para limpiar el carrito de compra
 function vaciarCarrito(){
-  limpiarLocalStorage()
+  limpiarCarrito()
   calculoTotal()
 }
 
-function limpiarLocalStorage(){
+function limpiarCarrito(){
   productosSeleccionados= [];
   localStorage.setItem("productosSeleccionados", JSON.stringify(productosSeleccionados));
-  localStorage.setItem("nombreInvitado", "Invitado");
 }
